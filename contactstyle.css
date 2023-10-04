@@ -155,11 +155,16 @@ footer a {
         font-size: 1rem;
     }
 }
-/* Xtra-Small */
 @media (max-width: 475px) {
     header,
     header li {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 375px) {
+    header,
+    header li {
+        font-size: 0.8rem;
     }
 }
 
