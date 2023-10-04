@@ -221,6 +221,12 @@ footer a {
 @media (max-width: 475px) {
     header,
     header li {
-        font-size: 1rem;
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 375px) {
+    header,
+    header li {
+        font-size: 0.45rem;
     }
 }
