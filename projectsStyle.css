@@ -22,7 +22,7 @@ header {
 }
 main {
     flex: 2;
-    flex-grow: 100;
+    flex-grow: 75;
 }
 footer {
     flex: 3;
@@ -124,12 +124,14 @@ footer a {
     padding: 5px;
 }
 
+/* Small */
 @media (max-width: 640px) {
     header,
     header li {
         font-size: 1rem;
     }
 }
+/* Xtra-Small */
 @media (max-width: 475px) {
     header,
     header li {
@@ -142,7 +144,7 @@ footer a {
 @media (max-width: 375px) {
     header,
     header li {
-        font-size: 0.8rem;
+        font-size: 0.45rem;
     }
     iframe {
         width:300px;
