@@ -164,7 +164,7 @@ footer a {
 @media (max-width: 375px) {
     header,
     header li {
-        font-size: 0.8rem;
+        font-size: 0.45rem;
     }
 }
 
