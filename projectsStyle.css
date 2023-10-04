@@ -137,4 +137,7 @@ footer a {
     header li {
         font-size: 1rem;
     }
+    iframe {
+        width:400px;
+    }
 }
