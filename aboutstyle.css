@@ -1,0 +1,179 @@
+@font-face {
+    src: url(Fonts/QueensidesLight-ZVj3l.ttf);
+    font-family: Queens;
+}
+* {
+    box-sizing: border-box;
+    font-family:Queens;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column; /* Make it a flex container (create a flexible layout)*/
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh; /* Make sure the body takes at least the full viewport height */
+}
+
+/* Flexbox for main elements */
+
+header {
+    flex: 1;
+}
+main {
+    flex: 2;
+    flex-grow: 100;
+}
+footer {
+    flex: 3;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(25, 26, 29);
+    text-align: center;
+    color: white;
+    padding: 25px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+header li {
+    display: inline-block;
+    padding: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+header a:hover {
+    color: rgb(215, 255, 215);
+}
+.logo {
+    cursor: pointer;
+}
+
+/* Main */
+
+#about {
+    display: flex;
+}
+#me {
+    flex: 1;
+    padding-top: 3%;
+    padding-left: 10%;
+    width: 1%;
+}
+#name {
+    flex: 1;
+    color: rgb(70, 122, 70);
+    font-weight: bold;
+    padding-top: 10%;
+    padding-left: 5%;
+    font-size: 45px;
+}
+#info {
+    flex: 2;
+}
+#info2 {
+    flex: 2;
+    padding-left: 5%;
+    margin-right: 20%;
+    font-weight: bold;
+    font-size: 20px;
+}
+#resumeButton {
+    color: rgb(70, 122, 70);
+    border-radius: 25px;
+    width: 20%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1%;
+    margin-top: 5%;
+}
+#resumeButton:hover {
+    background-color: rgb(194, 255, 194);
+    transform: scale(0.9);
+}
+
+/* Next Arrow */
+
+#next {
+    position: fixed;
+    width: 2%;
+    height: 5%;
+    top: 50%;
+    left: 92%;
+}
+#next:hover {
+    transform: scale(1.5);
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(25, 26, 29);
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+}
+.icons {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: inline-block; /* Set icons to display inline, allowing them to be next to each other horizontally */
+    margin-right: 10px; /* Spacing between icons */
+    border-radius: 50%;;
+    padding: 5px;
+}
+@media (max-width:1024px) {
+    #me {
+    width: 20%;
+    height: 10%;
+    }
+}
+@media (max-width:768px) {
+    #about {
+        flex-direction: column;
+    }
+    #me {
+        padding-left: 25%;
+        width: 77%;
+        height: 20%;
+    }
+    #info {
+        padding-bottom: 10%;
+    }
+    #info2 {
+        margin-right: 2%;
+    }
+}
+/* Small */
+@media (max-width: 640px) {
+    header,
+    header li {
+        font-size: 1rem;
+    }
+}
+/* Xtra-Small */
+@media (max-width: 475px) {
+    header,
+    header li {
+        font-size: 0.6rem;
+    }
+}
+
+#about {
+    justify-content: center;
+    animation-name: mainanim;
+    animation-duration: 1.5s;
+}
+@keyframes mainanim {
+    from{transform: translateX(50%);}
+}

@@ -1,0 +1,10 @@
+    <p>text<b>text</b></p>
+    <p>text<i>text</i></p>
+    <p>text<u>text</u></p>
+    <p>text<del>text</del></p>
+    <p>text<big>text</big></p>
+    <p>text<small>text</small></p>
+    <p>text<sub>text</sub></p>
+    <p>text<sup>text</sup></p>
+    <p>text<tt>text</tt></p>
+    <p>text<mark style="background-color:lightblue;">text</mark></p>

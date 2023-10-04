@@ -1,0 +1,226 @@
+@font-face {
+    src: url(Fonts/QueensidesLight-ZVj3l.ttf);
+    font-family: Queens;
+}
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family:Queens;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column; /* Make it a flex container (create a flexible layout)*/
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh; /* Make sure the body takes at least the full viewport height */
+}
+
+/* Flexbox for main elements */
+
+header {
+    flex: 1;
+}
+main {
+    flex: 2;
+    flex-grow: 75;
+}
+footer {
+    flex: 3;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(25, 26, 29);
+    text-align: center;
+    color: white;
+    padding: 25px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+header li {
+    display: inline-block;
+    padding: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+header a:hover {
+    color: rgb(215, 255, 215);
+}
+.logo {
+    cursor: pointer;
+}
+
+/* Main */
+
+main {
+    align-items: center; /* Center content horizontally */
+}
+main div {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 20px; /* Add some padding for spacing */
+    flex-grow: 1; /* Allow the main content to grow and take remaining space */
+}
+
+/* Description */
+
+aside {
+    flex: 1;
+    width: 100%;
+    padding-top: 10%;
+    padding-right: 25%;
+    font-size: 2vw;
+}
+aside h6 {
+    font-size: 60%;
+    padding-top: 15%;
+    font-style: italic;
+}
+#myName {
+    color: rgb(110, 192, 110);
+}
+
+/* Description Button */
+
+aside button {
+    border-radius: 25px;
+    width: 40%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Image */
+
+section {
+    flex: 2;
+    max-width: 100%;
+    padding-left: 25%;
+    padding-top: 3%;
+}
+.responsive {
+    width: 75%;
+    height: auto;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(25, 26, 29);
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+}
+.icons {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: inline-block; /* Set icons to display inline, allowing them to be next to each other horizontally */
+    margin-right: 10px; /* Spacing between icons */
+    border-radius: 50%;;
+    padding: 5px;
+}
+
+#mainstuff {
+    justify-content: center;
+    animation-name: mainanim;
+    animation-duration: 1.5s;
+}
+@keyframes mainanim {
+    from{transform: translateX(50%);}
+}
+/* Button Animation */
+#button {
+    transition: transform 0.5s ease;
+
+}
+#button:hover {
+    transform: scale(0.9);
+    background-color: rgb(194, 255, 194);
+}
+
+
+/* Go below 2560px (4k) */
+@media (max-width: 1440px) {
+    section { /* Picture */
+        padding-top: 10%;
+    }
+    aside { /* Desc */
+        padding-top: 12%;
+    }
+}
+/* Go below 1440px (Large Laptop) */
+@media (max-width: 1440px) {
+    section { /* Picture */
+        padding-top: 6%;
+    }
+    aside { /* Desc */
+        padding-top: 12%;
+    }
+}
+/* Xtra-Large */
+@media (max-width: 1280px) {
+    section { /* Picture */
+        padding-top: 6%;
+    }
+    aside { /* Desc */
+        padding-top: 12%;
+    }
+}
+/* Large */
+@media (max-width: 1024px) {
+    section { /* Picture */
+        padding-left: 15%;
+        padding-top: 5%;
+    }
+    .responsive {
+        width: 90%;
+    }
+    aside { /* Desc */
+        padding-right: 15%;
+        padding-top: 20%;
+    }
+}
+/* Medium */
+@media (max-width: 768px) {
+    section { /* Picture */
+        padding-left: 2%;
+        padding-top: 5%;
+    }
+    .responsive {
+        width: 90%;
+    }
+    aside { /* Desc */
+        padding-right: 2%;
+        padding-top: 30%;
+        font-size: 3vw;
+    }
+}
+/* Small */
+@media (max-width: 640px) {
+    header,
+    header li {
+        font-size: 1rem;
+    }
+}
+/* Xtra-Small */
+@media (max-width: 475px) {
+    header,
+    header li {
+        font-size: 1rem;
+    }
+}

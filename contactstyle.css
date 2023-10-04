@@ -1,0 +1,177 @@
+@font-face {
+    src: url(Fonts/QueensidesLight-ZVj3l.ttf);
+    font-family: Queens;
+}
+* {
+    box-sizing: border-box;
+    font-family:Queens;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column; /* Make it a flex container (create a flexible layout)*/
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh; /* Make sure the body takes at least the full viewport height */
+}
+
+/* Flexbox for main elements */
+
+header {
+    flex: 1;
+}
+main {
+    flex: 2;
+    flex-grow: 100;
+}
+footer {
+    flex: 3;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(25, 26, 29);
+    text-align: center;
+    color: white;
+    padding: 25px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+header li {
+    display: inline-block;
+    padding: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+header a:hover {
+    color: rgb(215, 255, 215);
+}
+.logo {
+    cursor: pointer;
+}
+
+/* Main */
+
+main {
+    background-image: url('Images/art.png');
+    background-size: 38%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+#theForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    padding-top: 4%;
+    width: 90%;
+    max-width: 600px;
+}
+form h1 {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 7%;
+}
+.input {
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 2px solid rgb(22, 85, 22);
+    font-size: 15px;
+}
+label {
+    font-weight: bold;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    transition: 0.2s;
+    cursor: text;
+    
+}
+button {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    border: 2px solid rgb(22, 85, 22);
+    border-radius: 25px;
+}
+button:hover {
+    transform: scale(0.9);
+}
+.formIcon {
+    margin-top: 2%;
+    margin-right: 10px;
+    width: 20px;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -40px;
+    font-size: 15px;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(25, 26, 29);
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+}
+.icons {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: inline-block; /* Set icons to display inline, allowing them to be next to each other horizontally */
+    margin-right: 10px; /* Spacing between icons */
+    border-radius: 50%;;
+    padding: 5px;
+}
+
+/* Small */
+@media (max-width: 640px) {
+    header,
+    header li {
+        font-size: 1rem;
+    }
+}
+/* Xtra-Small */
+@media (max-width: 475px) {
+    header,
+    header li {
+        font-size: 1rem;
+    }
+}
+
+/* Next Arrow */
+
+#next {
+    position: fixed;
+    width: 2%;
+    height: 5%;
+    top: 50%;
+    left: 92%;
+}
+#next:hover {
+    transform: scale(1.5);
+}
